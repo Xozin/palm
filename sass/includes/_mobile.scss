@@ -1,0 +1,206 @@
+.nomobile {
+  display: none;
+}
+
+header {
+  margin-top: 0;
+  padding: 8px;
+}
+
+.left {
+  order: 1;
+  width: 49%;
+}
+.right {
+  order: 2;
+  width: 49%;
+}
+
+.center {
+  order: 3;
+  width: 100%;
+}
+
+.big-tour {
+  width: 100%;
+}
+
+.header-container {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.call-us {
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 18px;
+  .label {
+    padding-left: 16px;
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.menu-items {
+  flex-wrap: wrap;
+  .menu-item {
+    width: 100%;
+    box-sizing: border-box;
+    .menu-item-input {
+      width: 100%;
+    }
+  }
+  .menu-submit-button {
+    width: 100%;
+    box-sizing: border-box;
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.container {
+  flex-wrap: wrap;
+  & > * {
+    margin: 0 auto 20px;
+  }
+}
+
+.left-half {
+  width: 100%;
+}
+
+.right-half {
+  width: 100%;
+}
+
+.plan-container {
+  width: 100%;
+  padding: 16px;
+}
+
+.main-note {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+.comment-container {
+  margin: 0;
+}
+
+.comment-items {
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+
+  justify-content: space-around;
+}
+
+.comment-item {
+  & +&  {
+    margin: 24px 0 0;
+  }
+}
+
+.comment-promo {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.news-container {
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 16px;
+  margin-top: 24px;
+  justify-content: space-between;
+}
+
+.news-items {
+  width: 100%;
+}
+
+.news-item {
+  padding-right: 24px;
+}
+
+@media (max-width: 400px) {
+  .news-item {
+    width: 100%;
+  }
+}
+
+.about-container {
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.about-items {
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+
+.about-text {
+  max-width: none;
+  margin: 0;
+}
+
+.about-item {
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.about-msg {
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 450px) {
+  .about-msg {
+    flex-wrap: wrap;
+  }
+
+  .telegramm {
+    margin: 0 0 16px;
+    width: 100%;
+  }
+
+  .vk  {
+    width: 100%;
+  }
+}
+
+.direction-small-container {
+  padding: 16px;
+  justify-content: space-around;
+}
+
+.footer {
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px;
+}
+
+.main-header-comment {
+  width: 100%;
+}
+
+.sponsors-text {
+  padding: 0;
+  width: 50%;
+}
+.news-sponsors {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.directions {
+  justify-content: space-around;
+}
+
+.directions-item {
+  min-width: 33%;
+  width: auto;
+}

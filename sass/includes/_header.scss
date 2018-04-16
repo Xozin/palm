@@ -1,0 +1,117 @@
+header {
+  @extend .cbt;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  .text {
+    font-family: Tavolga-Free;
+    font-size: 32px;
+    color: $black;
+  }
+  .note {
+    font-family: Carlito;
+    font-size: 14px;
+    font-stretch: normal;
+    color: $warm-grey;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item {
+  font-family: Carlito;
+  font-size: 16px;
+  color: $grey-blue;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    height: 1px;
+    opacity: 0.2;
+    background-color: $grey-blue;
+    display: block;
+    width: 100%;
+  }
+
+  &.hot {
+    color: #e44b3b;
+    padding-left: 14px;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 14px;
+      background-image: url(../../images/fire-icon.svg);
+      left: 0;
+      top: 0;
+    }
+    &::after {
+      background: #e44b3b;
+    }
+  }
+
+  & + & {
+    margin-left: 40px;
+  }
+}
+
+.call-us {
+  display: flex;
+  .label {
+    font-family: Carlito;
+    font-size: 14px;
+    color: $warm-grey;
+    text-align: right;
+    position: relative;
+    &::before {
+      content: '';
+      height: 8px;
+      width: 8px;
+      display: block;
+      position: absolute;
+      left: -12px;
+      top: 5px;
+      background-image: url(../../images/if-f-095-213074.png);
+    }
+  }
+  .number {
+    font-family: Tavolga-Free;
+    font-size: 28px;
+    text-align: right;
+    color: $black;
+  }
+  .btn-help-us {
+    font-family: Carlito-Bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: #ffffff;
+    padding: 16px 30px 14px 52px;
+    border-radius: 2px;
+    background-color: $sand;
+    position: relative;
+    margin-left: 32px;
+    cursor: pointer;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 16px;
+      left: 34px;
+      background-image: url(../../images/if-ticket-1608951.png);
+    }
+  }
+}
+

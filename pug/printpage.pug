@@ -1,0 +1,12 @@
+include includes/visit
+
+doctype html
+head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="initial-scale=1, maximum-scale=1")
+  link(rel='stylesheet', href='css/styles.css')
+
+body.print
+  .print-container
+    - for (var x = 0; x < 30; x++)
+      +visit(x)

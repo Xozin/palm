@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+.print {
+  font-size: 0;
+  &.solo {
+    .print-item-container {
+      padding: 0;
+      background-position: 0 0;
+    }
+  }
+}
+
+.print-container {
+  width: 5555px;
+}
+
+.print-item-container {
+  width: 1063px;
+  height: 591px;
+  padding: 24px;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  background-image: url(../../images/bg.png);
+  background-repeat: no-repeat;
+  background-position: 24px 24px;
+}
+
+.print-link {
+  font-family: Tavolga-Free, serif;
+  font-size: 32px;
+  color: #000000;
+  padding-top: 72px;
+}
+
+.print-header {
+  font-family: Carlito, serif;
+  font-size: 21px;
+  text-align: center;
+  color: #98968f;
+  padding-top: 10px;
+}
+
+.print-label {
+  font-family: Tavolga-Free, serif;
+  font-size: 54px;
+  line-height: 1.11;
+  text-align: center;
+  color: #000000;
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+.print-promo {
+  border-radius: 3px;
+  background-color: #ffffff;
+  padding: 18px 35px 19px;
+  font-family: Carlito, serif;
+  font-size: 29px;
+  text-align: center;
+  color: #000000;
+  display: inline-block;
+  width: auto;
+  margin: 28px auto 0;
+  .code {
+    display: inline;
+    color: #d45445;
+    font-size: 33px;
+    font-family: Carlito-Bold, serif;
+  }
+}
+
+.print-call-us {
+  font-family: Carlito, serif;
+  font-size: 25px;
+  color: #000000;
+  padding-top: 79px;
+}
+
+.print-phone {
+  display: inline;
+  font-size: 29px;
+  font-family: Carlito-Bold, serif;
+
+}

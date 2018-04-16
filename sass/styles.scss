@@ -1,0 +1,9 @@
+@import "includes/fonts";
+@import "includes/variables";
+@import "includes/printpage";
+@import "includes/header";
+@import "includes/main";
+
+@media (max-width: 600px) {
+  @import "includes/mobile";
+}

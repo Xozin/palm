@@ -1,0 +1,39 @@
+$sand: #e2bc71;
+$dark-sky-blue: #3c98e3;
+$grey-blue: #678598;
+$black: #201f1e;
+$greyish-brown: #444444;
+$warm-grey: #979590;
+
+input {
+  background: #ffffff;
+}
+
+.cbt {
+  max-width: 1328px;
+  margin: 0 auto;
+  padding: 56px 0;
+}
+
+@mixin placeholder($font, $fsz, $color) {
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-family: $font;
+    font-size: $fsz;
+    color: $color;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    font-family: $font;
+    font-size: $fsz;
+    color: $color;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    font-family: $font;
+    font-size: $fsz;
+    color: $color;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    font-family: $font;
+    font-size: $fsz;
+    color: $color;
+  }
+}
