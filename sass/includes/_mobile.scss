@@ -9,11 +9,24 @@ header {
 
 .left {
   order: 1;
-  width: 49%;
+  width: 100%;
 }
 .right {
   order: 2;
-  width: 49%;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .left, .right {
+    width: 49%;
+
+
+  }
+}
+
+.small-tour , .normal-tour {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .center {
@@ -52,12 +65,14 @@ header {
       width: 100%;
     }
   }
-  .menu-submit-button {
-    width: 100%;
-    box-sizing: border-box;
-    &::after {
-      display: none;
-    }
+
+}
+
+.menu-submit-button {
+  width: 100%;
+  box-sizing: border-box;
+  &::after {
+    display: none;
   }
 }
 

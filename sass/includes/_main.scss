@@ -46,11 +46,15 @@
 .menu-items {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
   background: #ffffff;
+  width: 80%;
 }
 
 .menu-item {
-  padding: 16px 15px 13px;
+  padding: 14px 13px 11px;
+  width: 20%;
+  box-sizing: border-box;
   & + & {
     border-left: 2px solid #f8f6f2;
   }
@@ -61,6 +65,11 @@
   font-size: 11px;
   text-transform: uppercase;
   color: $warm-grey;
+}
+
+.menu-items-container {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-item-input {
@@ -77,11 +86,13 @@
   font-family: Carlito-Bold;
   font-size: 18px;
   text-align: center;
-  padding: 28px 84px 21px 64px;
+  padding: 28px 50px 21px 35px;
   text-transform: uppercase;
   color: #ffffff;
   position: relative;
   flex-shrink: 0;
+  width: 20%;
+  box-sizing: border-box;
   &::after {
     content: '';
     display: block;

@@ -4,6 +4,10 @@
 @import "includes/header";
 @import "includes/main";
 
-@media (max-width: 600px) {
+@media (max-width: 1320px) and (min-width: 801px) {
+  @import "includes/lowres";
+}
+
+@media (max-width: 800px) {
   @import "includes/mobile";
 }
