@@ -58,14 +58,23 @@ header {
 
 .menu-items {
   flex-wrap: wrap;
+  width: 100%;
   .menu-item {
-    width: 100%;
+    width: 50%;
     box-sizing: border-box;
     .menu-item-input {
       width: 100%;
     }
   }
 
+}
+
+@media (max-width: 480px) {
+  .menu-items {
+    .menu-item {
+      width: 100%;
+    }
+  }
 }
 
 .menu-submit-button {
@@ -114,9 +123,12 @@ header {
 }
 
 .comment-item {
-  & +&  {
     margin: 24px 0 0;
+  &+& {
+    margin: 24px 0 0;
+
   }
+
 }
 
 .comment-promo {
@@ -218,4 +230,30 @@ header {
 .directions-item {
   min-width: 33%;
   width: auto;
+}
+
+.direction-item {
+  width: 50%;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .send-email {
+    flex-wrap: wrap;
+    input.email {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ddd;
+    }
+    .btn-subscribe {
+      width: 100%;
+    }
+  }
+}
+
+.sponsors-logo, .sponsors-text {
+  margin-left: auto;
+  margin-right: auto;
 }
