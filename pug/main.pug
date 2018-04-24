@@ -1,10 +1,10 @@
 extends layout
 block content
   .topbg
-  .header-texts
+  .header-texts(data-aos="fade-up")
     h2.main-header Авторские программы и экскурсии в Израиль, Россию, Грузию
     h3.main-header-comment Живописные места. Профессиональные гиды. Лучшие отели. Страхование на время поездки. Путешествуйте по миру вместе с Нами!
-  .menu
+  .menu(data-aos="fade-up")
     .menu-items-container
       .menu-items
         .menu-item
@@ -32,12 +32,12 @@ block content
 
   .content
     .container
-      .left
+      .left(data-aos="fade-up")
         .small-tour.israel
           .tour-header Туры в Израиль
         .small-tour.georgia
           .tour-header Туры в Грузию
-      .center.nomobile
+      .center.nomobile(data-aos="fade-up")
         .big-tour.holy-earth
           .score
             .score-header Оценка
@@ -53,7 +53,7 @@ block content
             .cost от 20 000 ₽
             .comment на 1 человека
           .btn-about Подробнее
-      .right
+      .right(data-aos="fade-up")
         .normal-tour.safari
           .hot-tour
             .hot-header Горящий тур
@@ -75,8 +75,8 @@ block content
             .comment на 1 человека
           .btn-about Подробнее
     .container.nomobile
-      .left-half
-        .recommended(data-aos="fade-up")
+      .left-half(data-aos="fade-up")
+        .recommended
           .recommended-container
             .recommended-bg
             .recommended-text Этот тур рекомендует 38 человек
@@ -97,7 +97,7 @@ block content
               .cost от 20 000 ₽
               .comment на 1 человека
             .btn-about Подробнее
-      .right-half
+      .right-half(data-aos="fade-up")
         .big-tour.holy-earth
           .score
             .score-header Оценка
@@ -117,7 +117,7 @@ block content
           .tour-comment-header Оплачивайте туры по приезду!
           .tour-comment-note="При бронировании тура вы можете получить отложенный платеж до момента поездки! "
             a Подробнее
-    .directions-container
+    .directions-container(data-aos="fade-up")
       h2.content-header Направления туров
       .directions
         .direction-item
@@ -170,7 +170,7 @@ block content
             .directions-item Дивеево
             .directions-item Дивеево
             .directions-item Дивеево
-      .tags
+      .tags(data-aos="fade-up")
         .tags-header Виды туров:
         .tag Активный отдых
         .tag Пляжный отдых
@@ -179,7 +179,7 @@ block content
         .tag Поломнический
         .tag  Индивидуальный
         .tag.label Теги
-    .main-note
+    .main-note(data-aos="fade-up")
       .comment-container
         h2.content-header.nomobile Мы полностью позаботимся о вас
         .main-comment.nomobile
@@ -201,7 +201,7 @@ block content
         .promo-header Поможем сэкономить вам до 20 000 ₽ за поездку
         .promo-content Наилучшее соотношение цены и качества (достигается за счет: включения популярных экскурсий, продумана логистика, подобраны.
         a Подробнее
-    .plan-container
+    .plan-container(data-aos="fade-up")
       .plan-row.nomobile
         .plan-header Планируете свой отдых?
         .plan-note Мы поможем вам подобрать необходимый тур на время вашего отдыха. Проинформируем о появлении новых туров, снижении цен и других выгодных предложениях.
@@ -213,7 +213,7 @@ block content
         input.email(placeholder="Электронный адрес")
         input.email(placeholder="Время отдыха")
         .btn-subscribe Подписаться
-    .news-container
+    .news-container(data-aos="fade-up")
       .news-items.nomobile
         .news-header Свежие новости
 

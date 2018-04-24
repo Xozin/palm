@@ -43,7 +43,9 @@
   padding: 100px;
 }
 
-
+.sponsors-text {
+  padding-right: 0;
+}
 
 @media (min-width: 1080px) {
   .left-half, .right-half {
@@ -64,4 +66,11 @@
     display: none;
   }
 
+}
+
+.small-tour {
+  margin-top: 0;
+  &+& {
+    margin-top: 16px;
+  }
 }
