@@ -12,6 +12,7 @@
   background-size: contain;
   height: 943px;
   background: url(../../images/bg-img.png) no-repeat;
+  background-size: cover;
 }
 
 .header-texts {
@@ -1183,6 +1184,7 @@ footer {
   text-transform: uppercase;
   padding: 16px 27px 14px 51px;
   position: relative;
+  box-sizing: border-box;
   &::before {
     content: '';
     display: block;
