@@ -2,38 +2,54 @@
   overflow: hidden;
   box-sizing: border-box;
   padding-right: 16px;
+  margin-bottom: 16px;
+  order: 1;
 }
 
 .center {
+  order: 3;
+ @media (max-width: 981px) {
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+ }
+  @media (min-width: 980px) {
 
-  .big-tour {
-    max-width: 100%;
-    width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-    .price {
-      top: 243px;
-    }
-    .about {
-      top: 130px;
-    }
+    .big-tour {
+      max-width: 100%;
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      .price {
+        top: 243px;
+      }
+      .about {
+        top: 130px;
+      }
 
-    .dates {
-      top: 183px;
+      .dates {
+        top: 183px;
+      }
     }
   }
+
 }
 
+
+
 .right {
-  margin-top: 24px;
+  order: 2;
+  margin-top: 0;
 }
 
 .right-half {
-  margin-top: 24px;
+  order: 1;
 }
 
 .container {
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .menu-items {
@@ -44,6 +60,10 @@
   width: 300px;
   margin: 0 auto;
   margin-top: 24px;
+}
+
+.normal-tour {
+  margin-top: 0;
 }
 
 .news-container, .news-sponsors {
@@ -58,21 +78,44 @@
   padding-right: 0;
 }
 
-@media (min-width: 1080px) {
-  .left-half, .right-half {
-    width: 49%;
+.left-half {
+  width: 100%;
+  margin-bottom: 24px;
+}
 
-    .big-tour {
-      width: 100%;
-    }
+.right-half {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  .big-tour {
+    order: 2;
+    flex-shrink: 0;
   }
 }
 
+.tour-comment {
+  order: 1;
+  min-width: 218px;
+  width: 100%;
+}
+
+.recommended {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.recommended-text {
+  white-space: normal;
+}
+
+.recommended-more {
+  top: 125px;
+}
+
 @media (max-width: 1080px) {
-  .left-half, .right-half {
-    margin-left: auto;
-    margin-right: auto;
-  }
+
   .comment-promo {
     display: none;
   }
@@ -83,5 +126,25 @@
   margin-top: 0;
   &+& {
     margin-top: 16px;
+  }
+}
+
+
+@media (max-width: 980px) {
+  .center {
+    justify-content: space-around;
+  }
+  .recommended {
+    justify-content: space-around;
+  }
+  .recommended-container {
+    display: none;
+  }
+  .tour-comment {
+    display: none;
+  }
+
+  .right-half {
+    justify-content: space-around;
   }
 }
