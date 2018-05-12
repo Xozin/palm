@@ -1,0 +1,100 @@
+extends layout
+include includes/mixins
+block header
+  header.tour-header
+    .tour-header-content
+      include includes/header
+      .back-link На страницу с турами
+      .tour-page-header Поломничество по святой земле
+        .tour-page-reviews 12 отзывов
+        .tour-page-score
+          .tour-page-score-header Оценка
+          .tour-page-score-value 8.7
+        .tour-page-time 3 дня
+        .tour-page-location Израиль
+        .tour-page-promo-programm Продуманная программа тура
+        .tour-page-promo-hotel Бюджетный отель
+        .tour-page-promo-excursion Уникальная экскурсия
+        .share Поделиться туром
+  .sample-pic
+  .sample-pic
+  .sample-pic
+  .sample-pic
+  .sample-pic
+  .sample-pic
+  .sample-pic
+  .sample-pic
+  .sample-pic
+
+block content
+
+  .content-right
+    article.tour-description Каждый турист, который приехал на отдых в Израиль, имеет замечательную возможность посетить самые значимые для христиан города – Иерусалим и Вифлеем. Индивидуальная экскурсия подарит возможность прогуляться по этим святым местам и ознакомиться с их главными достопримечательностями.
+    .tour-route-container
+      .tour-route
+        .route-label Маршрут:
+        .route-item Иерусалим
+        .route-item Вифлеем
+        .route-item Иерихон
+        .route-item Мертвое море
+        .route-item Средиземное море
+      .tour-route-map Смотреть на карте
+    .tour-programm-container
+      h2 Программа тура
+      .tour-accept Погрузиться в тур
+      .tour-programm-item.opened
+        .tour-programm-header
+          h3 День 1. Ознакомление
+          .tour-item-movings Переезды в течении дня
+          .tour-item-note Прилет, знакомство, заселение, первая экскурсия
+          .tour-item-movelist
+            .movelist-item Вифлеем
+            .movelist-item Иерихон
+        .tour-programm-body
+          .tour-item-image
+            img(src="../images/tour-item-image.png")
+            p
+              |11:00. Иерусалим – «вечный город», где дыхание истории ощущается каждой клеточкой тела. Здесь происходили основные библейские события, но святым этот город считают не только христиане
+              br
+              br
+              |15:00. В Старом городе, обнесенном древней стеной, есть мусульманский, еврейский и армянский районы.
+              br
+              br
+              |18:00. Здесь происходили основные библейские события, но святым этот город считают не только христиане. В Старом городе, обнесенном древней стеной, есть мусульманский, еврейский и армянский районы. "
+            .tour-video Посмотреть видео
+      .tour-programm-item.opened
+        .tour-programm-header
+          h3 День 1. Ознакомление
+          .tour-item-movings Переезды в течении дня
+          .tour-item-note Прилет, знакомство, заселение, первая экскурсия
+          .tour-item-movelist
+            .movelist-item Вифлеем
+            .movelist-item Иерихон
+      .tour-programm-item.opened
+        .tour-programm-header
+          h3 День 1. Ознакомление
+          .tour-item-movings Переезды в течении дня
+          .tour-item-note Прилет, знакомство, заселение, первая экскурсия
+          .tour-item-movelist
+            .movelist-item Вифлеем
+            .movelist-item Иерихон
+
+    .tour-included
+      .tour-included-items
+        .tour-included-item Размещение: 2-х / 3-х местное в отеле 3*+
+        .tour-included-item Питание: завтрак + ужин
+        .tour-included-item Транспорт: комфортабельный автобус с кондиционером
+        .tour-included-item Сопровождение: лицензированный гид
+        .tour-included-item Страхование: израильская мед. страховка
+      .tour-excluded-items
+        .tour-excluded-item Платные входы по программе
+        .tour-excluded-item Чаевые водителю — 60$
+    .tour-features Особенности: Обзорная программа. Рекомендуется для паломников, посещающих Святую Землю впервые.
+    .tour-reviews
+      h2 Отзывы по туру
+        span.gray (12)
+block prefooter
+  .pre-footer
+    .pre-footer-content
+      +directions
+    +about

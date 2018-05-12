@@ -1,0 +1,40 @@
+.tour-header {
+  background-image: url(../../images/img.png);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+.tour-header-content {
+  @extend .cbt;
+  .logo {
+    .text {
+      color: #ffffff;
+    }
+  }
+  .header-nav-item {
+    color: #ffffff;
+    &::after {
+      background-color: #ffffff;
+    }
+    &.hot {
+      color: #ffffff;
+      &::before {
+        background-image: url(../../images/fire-icon-second.png);
+        background-size: contain;
+      }
+    }
+  }
+  .back-link {
+    padding: 5px 11px 4px 25px;
+    display: inline-block;
+    font-family: Carlito;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: rgba(255,255,255,.15);
+    border-radius: 2px;
+    cursor: pointer;
+    margin-left: -11px;
+  }
+}

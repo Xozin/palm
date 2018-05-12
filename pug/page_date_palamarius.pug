@@ -1,0 +1,33 @@
+extends layout
+include includes/mixins
+block header
+  header.header
+    include includes/header.pug
+block content
+  .bg-dark
+  .bg-secondary
+  .search-container
+    +search
+  .search-complete
+    h2 Мы подобрали для вас 1 тур
+    .search-note-container
+      .search-note В указанную стоимость входит билет, а также проживание, питание, экскурсии и др. услуги
+      .search-sort-container
+        .search-sort-label="Сортировать по "
+        .search-sort-choose="стоимости "
+        .search-sort-additional="рекомендациям"
+    .search-result-container
+      +search-result-item("../images/waters-3102729-1280.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", true)
+      +search-result-item("../images/waters-3102729-1280.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", true)
+    .search-fail-header Не нашли подходящий тур?
+    .search-fail-label Посмотрите схожие туры или измените параметры подбора
+    .search-suggest-container
+      +search-result-item("../images/mountains-3098410-1920.png", 7.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", false, "16 января")
+      +search-result-item("../images/dolomites-2914157-1280.png", 49.4, "Сафари на джипах по иудейской пустыне", "1 день", "Израиль", 35000, "1 человека", true, "16 января")
+      +search-result-item("../images/basilica-of-the-holy-sepulchre-2070814-1280.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", false)
+      +search-result-item("../images/bled-1899264-1920.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", false)
+block prefooter
+  .pre-footer
+    .pre-footer-content
+      +directions
+    +about

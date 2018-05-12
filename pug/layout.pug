@@ -6,11 +6,12 @@ head
   link(rel='stylesheet', href='css/styles.css')
 
 body
-  header.header
-    include includes/header.pug
+  block header
+
   .content-container
     block content
   footer
+    block prefooter
     include includes/footer.pug
   script(src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js")
   script(src="../js/build/bundle.js")

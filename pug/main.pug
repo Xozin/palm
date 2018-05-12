@@ -1,34 +1,17 @@
 extends layout
+include includes/mixins
+block header
+  header.header
+    include includes/header.pug
 block content
   .topbg
   .header-texts(data-aos="fade-up")
     h2.main-header Поиск выгодных туров
     h3.main-header-comment Продуманные туры и экскурсии от профессионалов без посредников
   .menu(data-aos="fade-up")
-    .menu-items-container
-      .menu-items
-        .menu-item
-          .menu-item-header Откуда
-          input.menu-item-input
-        .menu-item
-          .menu-item-header Куда
-          input.menu-item-input
-        .menu-item
-          .menu-item-header Когда
-          input.menu-item-input
-        .menu-item
-          .menu-item-header на
-          input.menu-item-input
-        .menu-item
-          .menu-item-header Сколько вас
-          input.menu-item-input
-      .menu-submit-button Подобрать туры
+    +search
 
-    .menu-help
-      .filters Отфильтровать туры по видам и тегам
-      .no-cost
-        input#nocost(type="checkbox")
-        label(for="nocost") Не учитывать стоимость билета
+
 
   .content
     .container
@@ -119,66 +102,7 @@ block content
             a Подробнее
     .directions-container(data-aos="fade-up")
       h2.content-header Направления туров
-      .directions
-        .direction-item
-          .direction-header.russia Россия
-            span.direction-header-comment от 12 000 ₽
-          .directions
-            .directions-item Дивеево
-            .directions-item Самара
-            .directions-item Муром
-            .directions-item Золотое кольцо
-            .directions-item Санкт-Петербург
-            .directions-item Дивеево
-        .direction-item
-          .direction-header.russia Россия
-            span.direction-header-comment от 12 000 ₽
-          .directions
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-        .direction-item
-          .direction-header.russia Россия
-            span.direction-header-comment от 12 000 ₽
-          .directions
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-        .direction-item
-          .direction-header.russia Россия
-            span.direction-header-comment от 12 000 ₽
-          .directions
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-        .direction-item
-          .direction-header.russia Россия
-            span.direction-header-comment от 12 000 ₽
-          .directions
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-            .directions-item Дивеево
-      .tags(data-aos="fade-up")
-        .tags-header Виды туров:
-        .tag Активный отдых
-        .tag Пляжный отдых
-        .tag Молодежный
-        .tag Для молодоженов
-        .tag Поломнический
-        .tag  Индивидуальный
-        .tag.label Теги
+      +directions
     .main-note(data-aos="fade-up")
       .comment-container
         h2.content-header.nomobile Мы полностью позаботимся о вас
@@ -201,18 +125,7 @@ block content
         .promo-header Поможем сэкономить вам до 20 000 ₽ за поездку
         .promo-content Наилучшее соотношение цены и качества (достигается за счет: включения популярных экскурсий, продумана логистика, подобраны.
         a Подробнее
-    .plan-container(data-aos="fade-up")
-      .plan-row.nomobile
-        .plan-header Планируете свой отдых?
-        .plan-note Мы поможем вам подобрать необходимый тур на время вашего отдыха. Проинформируем о появлении новых туров, снижении цен и других выгодных предложениях.
-      .plan-row
-        .plan-item Без спама
-        .plan-item Только выгодные предлоожения
-        .plan-item Отписаться можно в любой момент
-      .send-email
-        input.email(placeholder="Электронный адрес")
-        input.email(placeholder="Время отдыха")
-        .btn-subscribe Подписаться
+    +plan
     .news-container(data-aos="fade-up")
       .news-items.nomobile
         .news-header Свежие новости
@@ -233,3 +146,5 @@ block content
           .spornsors-header Оформление тура в офисе
           .sponsors-note Вы можете оформить наши туры оффлайн, посетив один из офисов наших парнеров.
           a.sponsors-more Подробнее
+block prefooter
+  include includes/prefooter

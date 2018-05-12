@@ -1,0 +1,141 @@
+mixin plan
+  .plan-container(data-aos="fade-up")
+    .plan-row.nomobile
+      .plan-header Планируете свой отдых?
+      .plan-note Мы поможем вам подобрать необходимый тур на время вашего отдыха. Проинформируем о появлении новых туров, снижении цен и других выгодных предложениях.
+    .plan-row
+      .plan-item Без спама
+      .plan-item Только выгодные предлоожения
+      .plan-item Отписаться можно в любой момент
+    .send-email
+      input.email(placeholder="Электронный адрес")
+      input.email(placeholder="Время отдыха")
+      .btn-subscribe Подписаться
+
+mixin about
+  .about-container
+    .about-items
+      .about-item
+        .about-number 10
+        .about-text лет на рынке
+      .about-item
+        .about-number 10
+        .about-text лет на рынке
+      .about-item
+        .about-number 10
+        .about-text лет на рынке
+      .about-item
+        .about-number 10
+        .about-text лет на рынке
+    .about-msg
+      .telegramm Телеграм
+      .vk Вконтакте
+
+mixin directions
+  .directions
+    .direction-item
+      .direction-header.russia Россия
+        span.direction-header-comment от 12 000 ₽
+      .directions
+        .directions-item Дивеево
+        .directions-item Самара
+        .directions-item Муром
+        .directions-item Золотое кольцо
+        .directions-item Санкт-Петербург
+        .directions-item Дивеево
+    .direction-item
+      .direction-header.russia Россия
+        span.direction-header-comment от 12 000 ₽
+      .directions
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+    .direction-item
+      .direction-header.russia Россия
+        span.direction-header-comment от 12 000 ₽
+      .directions
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+    .direction-item
+      .direction-header.russia Россия
+        span.direction-header-comment от 12 000 ₽
+      .directions
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+    .direction-item
+      .direction-header.russia Россия
+        span.direction-header-comment от 12 000 ₽
+      .directions
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+        .directions-item Дивеево
+  .tags(data-aos="fade-up")
+    .tags-header Виды туров:
+    .tag Активный отдых
+    .tag Пляжный отдых
+    .tag Молодежный
+    .tag Для молодоженов
+    .tag Поломнический
+    .tag  Индивидуальный
+    .tag.label Теги
+
+
+mixin search
+  .menu-items-container
+    .menu-items
+      .menu-item
+        .menu-item-header Откуда
+        input.menu-item-input
+      .menu-item
+        .menu-item-header Куда
+        input.menu-item-input
+      .menu-item
+        .menu-item-header Когда
+        input.menu-item-input
+      .menu-item
+        .menu-item-header на
+        input.menu-item-input
+      .menu-item
+        .menu-item-header Сколько вас
+        input.menu-item-input
+    .menu-submit-button Подобрать туры
+
+  .menu-help
+    .filters Отфильтровать туры по видам и тегам
+    .no-cost
+      input#nocost(type="checkbox")
+      label(for="nocost") Не учитывать стоимость билета
+
+mixin search-result-item($image, $score, $header, $time, $location, $price, $count, $reccomended, $date)
+  .search-result-item
+    - if($reccomended)
+      .search-result-reccomended рекомендуют
+    .search-result-score
+      .search-result-score-header Оценка
+      .search-result-score-value=$score
+    .search-result-bg
+      img.search-result-image(src=$image)
+    .search-result-content
+      .search-result-header=$header
+      .search-result-when
+        - if(typeof($date) !== 'undefined')
+          .search-result-date=$date
+        .search-result-time=$time
+        .search-result-location=$location
+      .search-result-price=`от ${$price} ₽`
+      .search-result-count=`на ${$count}`
+      .search-result-more Подробнее
