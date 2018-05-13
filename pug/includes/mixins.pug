@@ -139,3 +139,16 @@ mixin search-result-item($image, $score, $header, $time, $location, $price, $cou
       .search-result-price=`от ${$price} ₽`
       .search-result-count=`на ${$count}`
       .search-result-more Подробнее
+
+mixin tour-review($author, $authorLocation, $score, $reviewLabel, $review, $date)
+  .tour-review
+    .tour-review-about
+      .tour-review-author=$author
+      .tour-review-from=$authorLocation
+      .tour-review-score
+        .tour-review-score-label Оценка:
+        .tour-review-score-value=$score
+    .tour-review-content
+      .tour-review-content-label=$reviewLabel
+      .tour-review-content-text=$review
+      .tour-review-content-date=`Опубликовано: ${$date}`

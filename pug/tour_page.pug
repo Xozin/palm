@@ -1,58 +1,68 @@
 extends layout
 include includes/mixins
 block header
-  header.tour-header
-    .tour-header-content
+  header.target-tour-header
+    .target-tour-header-content
       include includes/header
       .back-link На страницу с турами
-      .tour-page-header Поломничество по святой земле
-        .tour-page-reviews 12 отзывов
-        .tour-page-score
-          .tour-page-score-header Оценка
-          .tour-page-score-value 8.7
+      .tour-page-head
+        .tour-page-head-row
+          h1.tour-page-header Поломничество по святой земле
+          .target-tour-header-about
+            .tour-page-reviews 12 отзывов
+            .tour-page-score
+              .tour-page-score-header Оценка
+              .tour-page-score-value 8.7
+
         .tour-page-time 3 дня
         .tour-page-location Израиль
-        .tour-page-promo-programm Продуманная программа тура
-        .tour-page-promo-hotel Бюджетный отель
-        .tour-page-promo-excursion Уникальная экскурсия
-        .share Поделиться туром
-  .sample-pic
-  .sample-pic
-  .sample-pic
-  .sample-pic
-  .sample-pic
-  .sample-pic
-  .sample-pic
-  .sample-pic
-  .sample-pic
+        .tour-page-head-row.last-row
+          .tour-page-promo
+            .tour-page-promo-programm Продуманная программа тура
+            .tour-page-promo-hotel Бюджетный отель
+            .tour-page-promo-excursion Уникальная экскурсия
+          .share Поделиться туром
+  .samples
+    .sample-pic
+    .sample-pic
+    .sample-pic
+    .sample-pic
+    .sample-pic
+    .sample-pic
+    .sample-pic
+    .sample-pic
+    .sample-pic
 
 block content
+  .tour-content-container
+    .content-right
+      article.tour-description Каждый турист, который приехал на отдых в Израиль, имеет замечательную возможность посетить самые значимые для христиан города – Иерусалим и Вифлеем. Индивидуальная экскурсия подарит возможность прогуляться по этим святым местам и ознакомиться с их главными достопримечательностями.
+      .tour-route-container
+        .tour-route
+          .route-label Маршрут:
+          .route-item Иерусалим
+          .route-item Вифлеем
+          .route-item Иерихон
+          .route-item Мертвое море
+          .route-item Средиземное море
+        .tour-route-map Смотреть на карте
+      .tour-programm-container
+        h2 Программа тура
+        .tour-accept Погрузиться в тур
+        .tour-programm-item.opened
+          .tour-programm-header
+            .tour-programm-header-row
+              h3 День 1. Ознакомление
+              .tour-item-movings Переезды в течении дня
+            .tour-programm-header-row
 
-  .content-right
-    article.tour-description Каждый турист, который приехал на отдых в Израиль, имеет замечательную возможность посетить самые значимые для христиан города – Иерусалим и Вифлеем. Индивидуальная экскурсия подарит возможность прогуляться по этим святым местам и ознакомиться с их главными достопримечательностями.
-    .tour-route-container
-      .tour-route
-        .route-label Маршрут:
-        .route-item Иерусалим
-        .route-item Вифлеем
-        .route-item Иерихон
-        .route-item Мертвое море
-        .route-item Средиземное море
-      .tour-route-map Смотреть на карте
-    .tour-programm-container
-      h2 Программа тура
-      .tour-accept Погрузиться в тур
-      .tour-programm-item.opened
-        .tour-programm-header
-          h3 День 1. Ознакомление
-          .tour-item-movings Переезды в течении дня
-          .tour-item-note Прилет, знакомство, заселение, первая экскурсия
-          .tour-item-movelist
-            .movelist-item Вифлеем
-            .movelist-item Иерихон
-        .tour-programm-body
-          .tour-item-image
-            img(src="../images/tour-item-image.png")
+              .tour-item-note Прилет, знакомство, заселение, первая экскурсия
+              .tour-item-movelist
+                .movelist-item Вифлеем
+                .movelist-item Иерихон
+          .tour-programm-body
+            .tour-item-image
+              img(src="../images/tour-item-image.png")
             p
               |11:00. Иерусалим – «вечный город», где дыхание истории ощущается каждой клеточкой тела. Здесь происходили основные библейские события, но святым этот город считают не только христиане
               br
@@ -62,37 +72,116 @@ block content
               br
               |18:00. Здесь происходили основные библейские события, но святым этот город считают не только христиане. В Старом городе, обнесенном древней стеной, есть мусульманский, еврейский и армянский районы. "
             .tour-video Посмотреть видео
-      .tour-programm-item.opened
-        .tour-programm-header
-          h3 День 1. Ознакомление
-          .tour-item-movings Переезды в течении дня
-          .tour-item-note Прилет, знакомство, заселение, первая экскурсия
-          .tour-item-movelist
-            .movelist-item Вифлеем
-            .movelist-item Иерихон
-      .tour-programm-item.opened
-        .tour-programm-header
-          h3 День 1. Ознакомление
-          .tour-item-movings Переезды в течении дня
-          .tour-item-note Прилет, знакомство, заселение, первая экскурсия
-          .tour-item-movelist
-            .movelist-item Вифлеем
-            .movelist-item Иерихон
+        .tour-programm-item.opened
+          .tour-programm-header
+            .tour-programm-header-row
+              h3 День 1. Ознакомление
+              .tour-item-movings Переезды в течении дня
+            .tour-programm-header-row
 
-    .tour-included
-      .tour-included-items
-        .tour-included-item Размещение: 2-х / 3-х местное в отеле 3*+
-        .tour-included-item Питание: завтрак + ужин
-        .tour-included-item Транспорт: комфортабельный автобус с кондиционером
-        .tour-included-item Сопровождение: лицензированный гид
-        .tour-included-item Страхование: израильская мед. страховка
-      .tour-excluded-items
-        .tour-excluded-item Платные входы по программе
-        .tour-excluded-item Чаевые водителю — 60$
-    .tour-features Особенности: Обзорная программа. Рекомендуется для паломников, посещающих Святую Землю впервые.
-    .tour-reviews
-      h2 Отзывы по туру
-        span.gray (12)
+              .tour-item-note Прилет, знакомство, заселение, первая экскурсия
+              .tour-item-movelist
+                .movelist-item Вифлеем
+                .movelist-item Иерихон
+        .tour-programm-item.opened
+          .tour-programm-header
+            .tour-programm-header-row
+              h3 День 1. Ознакомление
+              .tour-item-movings Переезды в течении дня
+            .tour-programm-header-row
+
+              .tour-item-note Прилет, знакомство, заселение, первая экскурсия
+              .tour-item-movelist
+                .movelist-item Вифлеем
+                .movelist-item Иерихон
+      .tour-included
+        .tour-included-items
+          h3 Входит в стоимость
+          .tour-included-item Размещение: 2-х / 3-х местное в отеле 3*+
+          .tour-included-item Питание: завтрак + ужин
+          .tour-included-item Транспорт: комфортабельный автобус с кондиционером
+          .tour-included-item Сопровождение: лицензированный гид
+          .tour-included-item Страхование: израильская мед. страховка
+        .tour-excluded-items
+          h3 Не входит в стоимость
+
+          .tour-excluded-item Платные входы по программе
+          .tour-excluded-item Чаевые водителю — 60$
+      .tour-features
+        b Особенности:
+        =" Обзорная программа. Рекомендуется для паломников, посещающих Святую Землю впервые."
+      .tour-reviews
+        .tour-reviews-headers
+          h2 Отзывы по туру
+            span.gray=" (12)"
+          .add-review Добавить свой отзыв
+        .tour-avg-score-container
+          .tour-avg-score-label Средняя оценка:
+          .tour-avg-score 8,6
+        +tour-review("Наталья Одинцова", "Москва", "8,0", "Тур не плохой", "Отдыхали с друзьями с 3 января 2018 нас было 8 человек, перелет АК Россия (с доплатами, но зато идеальный перелет удобные кресла все чётко по расписанию) в Тайланде были некоторые первый раз, а кто-то уже отдыхал. Отель не плохой, но примерно 3 звезды по номерам. Все эти номера были одинаковые, но достаточно потрепанно.", "10 января 2018")
+        +tour-review("Наталья Одинцова", "Москва", "8,0", "Тур не плохой", "Отдыхали с друзьями с 3 января 2018 нас было 8 человек, перелет АК Россия (с доплатами, но зато идеальный перелет удобные кресла все чётко по расписанию) в Тайланде были некоторые первый раз, а кто-то уже отдыхал. Отель не плохой, но примерно 3 звезды по номерам. Все эти номера были одинаковые, но достаточно потрепанно.", "10 января 2018")
+        .tour-more Показать еще
+      .faq-block
+        h2.faq-header Актуальные вопросы
+        .faq-element.opened
+          .faq-head
+            .faq-label Вдруг я передумаю ехать?
+            .faq-line
+            .faq-icon
+          .faq-content Согласно оферте, если вы отмените тур, туроператор удержит часть или полную стоимость тура. Как правило, чем меньше времени до вылета, тем меньше денег вернется. Чтобы заранее узнать сумму возврата, позвоните нам.
+        .faq-element
+          .faq-head
+            .faq-label Вдруг я передумаю ехать?
+            .faq-line
+            .faq-icon
+        .faq-element
+          .faq-head
+            .faq-label Вдруг я передумаю ехать?
+            .faq-line
+            .faq-icon
+        .faq-element
+          .faq-head
+            .faq-label Вдруг я передумаю ехать?
+            .faq-line
+            .faq-icon
+    .content-left
+      .take-tour-container
+        .economy Экономия до 20 000 ₽
+        .take-tour-price 55 900 ₽
+        .take-tour-price-details
+          .take-tour-price-detail 49 700 ₽ —  тур
+          .take-tour-price-detail 6 200 ₽ — билет
+        .take-tour-feedback Сообщить о снижении цены на тур
+        .btn Забронировать тур
+      .take-tour-elements
+        .take-tour-element
+          .take-tour-element-label Кол-во человек
+          .take-tour-element-text 2 взрослых
+          .chech
+        .take-tour-element
+          .take-tour-element-label Кол-во человек
+          .take-tour-element-text 2 взрослых
+          .chech
+        .take-tour-element
+          .take-tour-element-label Кол-во человек
+          .take-tour-element-text 2 взрослых
+          .chech
+        .take-tour-element
+          .take-tour-element-label Кол-во человек
+          .take-tour-element-text 2 взрослых
+          .chech
+
+block optional
+  .tour-suggest-container
+    .tour-suggest-content
+      h2.tour-suggest-header Этот тур вам не подходит?
+      .tour-suggest-label Посмотрите схожие туры или вернитесь на страницу с турами
+      .tour-suggest-items
+        +search-result-item("../images/waters-3102729-1280.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", true)
+        +search-result-item("../images/waters-3102729-1280.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", true)
+        +search-result-item("../images/waters-3102729-1280.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", true)
+        +search-result-item("../images/waters-3102729-1280.png", 9.4, "Поломничество по Грузии", "1 день", "Израиль", 35000, "1 человека", true)
+  +plan
 block prefooter
   .pre-footer
     .pre-footer-content
